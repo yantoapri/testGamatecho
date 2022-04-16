@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "da7997ce-db83-4dee-85b9-7ce314c066df",
+		"name": "TESTAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_API}}/getTask?status=",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"getTask"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				},
+				"description": "Api ini digunakan untuk mengambil data task berdasarkan statusnya,berikut ini adalah keterangan parameter yang digunakan:\n\nall = ambil semua data\n\nactivea = mbil data bersetatus aktif\n\ncomplite = ambil data yang bersetatus complite"
+			},
+			"response": [
+				{
+					"name": "getTask/all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/api/getTask?status=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"api",
+								"getTask"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [
+						{}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "getTask/active",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/api/getTask?status=active",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"api",
+								"getTask"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "active"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [
+						{}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "getTask/complite",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/getTask?status=complite",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"getTask"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "complite"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [
+						{}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "addTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"try add task\",\r\n    \"status\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API}}/api/addTask",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"api",
+						"addTask"
+					]
+				},
+				"description": "Api ini digunakan untuk create new task"
+			},
+			"response": [
+				{
+					"name": "addTask",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"try add task\",\r\n    \"status\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/api/addTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"api",
+								"addTask"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API}}/updateTask?id=3",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"updateTask"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Apri ini digunakan untuk mengupdate data, berikut ini adalah keterangan parameter yang digunakan:\n\nid= id task\n\nstatus=status task (1=active,2=complite)"
+			},
+			"response": [
+				{
+					"name": "updateTask",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"try update task\",\r\n    \"status\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/updateTask?id=3",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"updateTask"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "completedTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":[10,9,8,7]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API}}/completedTask",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"completedTask"
+					]
+				},
+				"description": "Api ini digunakan untuk mengubah semua task active menjadi complite. berikut ini detail parameternya:\n\n{\"data\":\\[id1,id2,id3....\\]}"
+			},
+			"response": [
+				{
+					"name": "completedTask",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":[10,9,8,7]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/completedTask",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"completedTask"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [
+						{}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "clearComplite",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_API}}/clearComplite",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"clearComplite"
+					]
+				},
+				"description": "Api ini digunakan untuk menghapus semua data task dengan status complote"
+			},
+			"response": []
+		}
+	]
+}

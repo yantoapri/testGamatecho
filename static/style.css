@@ -1,0 +1,75 @@
+body{
+	background: silver;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+.black{
+	color: black;
+}
+.form{
+	width: 80vw;
+	margin: 0 auto;
+	border: 1px solid #cfcdcd;
+	padding: 10px;
+	margin-top: 5vw;
+}
+.scribble{
+	text-decoration: line-through;
+	color: silver;
+}
+.f2{
+	font-size: 1vw;
+}
+.complite .icon{
+	font-size: 1.5vw;
+	color: green;
+}
+.no-border{
+	border: 0px !important;
+}
+.complite .text{
+}
+.active .text{
+	margin-left: 0vw;
+}
+.item{
+	cursor: pointer;
+}
+.item:hover{
+	border: 1px solid red;
+	border-radius: 5px;
+	padding: 5px;
+}
+.custom-checkbox.b-custom-control-lg .custom-control-label::before, .input-group-lg .custom-checkbox .custom-control-label::before{
+	border-radius: 50% !important;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+	color: #28a745;
+	border-color: #28a745;
+	background-color: #28a745;
+}
+#dropdown-1{
+	margin-left: -0.7vw;
+}
+@media only screen and (max-width: 575px) {
+	.form{
+		width: 85vw;
+	}
+	.complite .icon{
+		font-size: 5vw;
+	}
+	.complite .text{
+		margin-left: 2vw;
+		padding-top: 1.5vw;
+	}
+	.f2{
+		font-size: 2.2vw;
+	}
+	#dropdown-1{
+		margin-left: -2.7vw;
+	}
+}
